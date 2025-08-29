@@ -1,3 +1,21 @@
+# first attempt
+file = input("Enter file address: ")
+
+with open(file, "r") as f:
+    lines_count = len(f.readlines())
+    f.seek(0)
+    word_count = len(f.read().split())
+    f.seek(0)
+    character_count = len(f.read())   # ❌ don’t strip here
+
+print(f"Word count of your file: {word_count}") 
+print(f"Number of lines in the file: {lines_count}")  
+print(f"Character count in the file: {character_count}")
+
+
+
+
+# improved virsion-
 # (for UX mainly) using input to obtain file name 
 file=input("ender file address: ")
 
